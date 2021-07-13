@@ -1,0 +1,61 @@
+<html>
+    <head>
+        <title>2d fractals</title>
+        <script type="module" src="scripts/main.js"></script>
+        <link rel="stylesheet" href="style/style.css">
+    </head>
+    <body>
+        <header>
+            <h1 class="title bg-primary">Fractals</h1>
+        </header>
+        <main>
+            <section class="bg-secondary padding-vertical-md shadow-bottom-secondary">
+                <div id="canvas-container" class="">
+                    <canvas id="canvasFullImage" class="border-right-black round-corners-left-md" width="500" height="500">
+                    Your browser does not support the canvas element.
+                    </canvas>
+                    <div id="zoom" class="bg-white round-corners-right-md">
+                        <canvas id="canvasZoom" class="border-black round-corners-md" width="250" height="250">
+                            Your browser does not support the canvas element.
+                        </canvas>
+                        <div id="control">
+                            <input id="reset-button" class="margin-bottom-md" type="button" value="RESET" onclick="reset();">
+                            <p>Pick a function that generates a fractal.</p>
+                            <select onChange="selectFunction(this.selectedIndex);">
+                                <option>(0) mendelbrot</option>
+                                <option>(1) z := z^2 + (z0)^3</option>
+                                <option>(2) z := z^2 - 0.79 + 0.15i</option>
+                                <option>(3) z := z^2 - 0.15 + 0.8418i</option>
+                                <option>(4) z := z^2 + 0.3 - 0.01i</option>
+                                <option>(5) z := z^2 - 1.476</option>
+                                <option>(6) z := z^2 - 0.207 - 0.79i</option>
+                                <option>(7) z := z^2 + 0.28 - 0.008i</option>
+                                <option>(8) z := z^2 - 0.4 + 0.6i</option>
+                                <option>(9) z := z^2 - 0.1 + 0.651i</option>
+                                <option>(10) z := z^2 + 0.355 + 0.355i</option>
+                                <option>(11) z := z^2 - 0.4 - 0.595i</option>
+                                <option>(12) z := z^2 + z + 0.09 - 0.059i</option>
+                                <option>(13) z := z^2 + z + 0.081 + 0.0505i</option>
+                                <option>(14) z := z^2 + z - 0.5 + 0.647i</option>
+                                <option>(15) z := z^2 + z - 0.6 + 0.63i</option>
+                                <option>(16) z := z^2 + z + 0.09 - 0.4178i</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="instructions">
+                <h2>Instructions:</h2>
+                <ul>
+                    <li>a zoomed-in image will be displayed in the right frame depending on the position of a mouse</li>
+                    <li>use the scroll wheel to adjust the zoomed-in image</li>
+                    <li>left click to render a higher quality version of a zoomed-in image</li>
+                </ul>
+            </section>
+        </main>
+
+        <footer>
+
+        </footer>
+    </body>
+</html>
